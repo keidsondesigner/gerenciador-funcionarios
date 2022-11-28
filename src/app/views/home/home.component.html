@@ -4,17 +4,16 @@
     <h1 class="text-center my-5">
       Gerenciador de Funcionários
     </h1>
-
-    <form class="row g-3 justify-content-center">
-      <div class="col-3">
-        <label for="inputPassword2" class="visually-hidden">Buscar funcionario</label>
-        <input type="search" class="form-control" id="inputPassword2" placeholder="Buscar funcionário">
-      </div>
-      <div class="col-auto">
-        <button type="submit" class="btn btn-primary mb-3">Pesquisar</button>
-      </div>
-
-    </form>
+    <div class="d-flex justify-content-center">
+      <form class="d-flex justify-content-end me-2">
+        <div class="col-auto me-2">
+          <label for="inputPassword2" class="visually-hidden">Buscar funcionario</label>
+          <input type="search" class="form-control" id="inputPassword2" placeholder="Buscar funcionário">
+        </div>
+        <button type="submit" class="btn btn-primary">Pesquisar</button>
+      </form>
+      <button class="col-auto btn btn-success" (click)="open(content)">Novo funcionário</button>
+    </div>
   </section>
 </main>
 
@@ -49,9 +48,4 @@
 		<button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
 	</div>
 </ng-template>
-
-<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
-
-<hr />
-
 <pre>{{ closeResult }}</pre>
