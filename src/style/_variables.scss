@@ -1,0 +1,73 @@
+$blue: #0095f6;
+$blue-dark: #0089ff;
+$indigo: indigo;
+$cyan: #8091a9;
+$green: #3a9589;
+$teal: #63e881;
+$gray: #919191;
+$gray-light: #efefef;
+$gray-medium: #dbdbdb;
+$yellow: #ffc500;
+$red: #bb2323;
+$white: #ffffff;
+$white-medium: #f5f5f5;
+$dark: #262626;
+$purple: #5e56c0;
+$pink: #ff6c5c;
+$orange: #ef7e06;
+
+$primary: $blue;
+$secondary: $gray-medium;
+$danger: $red;
+$success: $green;
+$warning: $yellow;
+$info: $gray-light;
+
+$enable-smooth-scroll: true;
+$enable-shadows: false;
+$enable-gradients: false;
+$enable-responsive-font-sizes: true;
+$body-bg: $white;
+$body-color: $dark;
+// $link-color: $cyan;
+$card-border-color: rgba($white, 0.125);
+$card-bg: rgba($white, 0.05);
+$table-bg: $dark;
+$list-group-bg: rgba($white, 0.05);
+$modal-content-bg: rgba($white, 1);
+$jumbotron-bg: rgba($white, 0.05);
+$enable-negative-margins: true;
+// -------------------------------------
+
+// $font-sizes: (
+//   1: 3.25rem,
+//   2: 2.75rem,
+//   3: 2rem,
+//   4: 1.5rem,
+//   5: 1.125rem,
+//   6: 0.875rem,
+// );
+
+// // -------------------------------------
+// @font-face {
+//   font-family: "Inter";
+//   src: url("../assets/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf")
+//     format("truetype");
+//   font-weight: 100 800;
+//   font-display: swap;
+// }
+// @font-face {
+//   font-family: "Cairo";
+//   src: url("../assets/fonts/Cairo/Cairo-VariableFont_wght.ttf")
+//     format("truetype");
+//   font-weight: 100 800;
+//   font-display: swap;
+// }
+
+// $font-family-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
+//   "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+//   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+// $font-family-monospace: "Cairo", SFMono-Regular, Menlo, Monaco, Consolas,
+//   "Liberation Mono", "Courier New", monospace !default;
+// // -------------------------------------

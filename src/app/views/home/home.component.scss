@@ -1,0 +1,30 @@
+@import "./../../../style/variables";
+
+
+#inputPassword2::placeholder {
+  color: $gray !important;
+}
+
+#inputPassword2 {
+  background-color: $gray-light !important;
+  color: $gray !important;
+}
+
+#btnSearch:hover {
+  background-color: $gray-medium;
+}
+
+#bntSave:hover {
+  background-color: $white-medium;
+}
+
+.add-func:hover {
+  background-color: $blue-dark;
+}
+
+#form-modal {
+  select:focus {
+    border-color: 0;
+    box-shadow: none;
+  }
+}
