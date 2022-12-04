@@ -2,9 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.3.
 
-## Development server
+## Development Front end server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+## Development Back end Fake json-server
+
+Run `json-server --watch db.json` to execute back end.  Navigate to `http://localhost:3000/` [Json-server](https://github.com/typicode/json-server).
 
 ## Code scaffolding
 
