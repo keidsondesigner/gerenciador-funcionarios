@@ -1,34 +1,38 @@
-import { Component } from '@angular/core';
-import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
-  closeResult = '';
+export class HomeComponent implements  OnInit {
+  employeeForm: FormGroup;
 
-	constructor(private modalService: NgbModal) {}
+  educationList = [
+    { title: 'Ensino médio'},
+    { title: 'Graduação'},
+    { title: 'Pós Graduação'},
+    { title: 'PhD'}
+  ]
+	constructor( private fb: FormBuilder ) {
+    this.employeeForm = fb.group({});
+  }
 
-	open(content: any) {
-		this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then(
-			(result) => {
-				this.closeResult = `Closed with: ${result}`;
-			},
-			(reason) => {
-				this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-			},
-		);
-	}
+  ngOnInit(){
+    this.employeeForm = this.fb.group({
+      firstname: this.fb.control(null),
+      lastname: this.fb.control(null),
+      birthday: this.fb.control(null),
+      gender: this.fb.control(null),
+      education: this.fb.control('default'),
+      company: this.fb.control(null),
+      jobExperience: this.fb.control(null),
+      salary: this.fb.control(null),
+    });
+  }
 
-	private getDismissReason(reason: any): string {
-		if (reason === ModalDismissReasons.ESC) {
-			return 'by pressing ESC';
-		} else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
-			return 'by clicking on a backdrop';
-		} else {
-			return `with: ${reason}`;
-		}
-	}
+  RegisterUser() {
+    console.log('Formulário');
+  }
 }
