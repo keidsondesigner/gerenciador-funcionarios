@@ -4,18 +4,34 @@
     Gerenciador de Funcionários
   </h1>
   <div class="row row-cols-2 justify-content-center">
-    <form class="row row-cols-2 col-auto">
+    <div class="row row-cols-2 col-auto">
       <div class="col-auto">
         <label for="inputPassword2" class="visually-hidden">Buscar funcionario</label>
-        <input type="search" class="border-info form-control rounded-1 text-capitalize" id="inputPassword2" placeholder="Buscar funcionário">
+        <input type="search" class="border-info form-control rounded-1" id="inputPassword2" placeholder="Buscar por nome" (input)="searchEmployees(searchInput.value)" #searchInput />
       </div>
-      <button class="btn btn-info col-auto fw-semibold rounded-1" id="btnSearch" type="submit" >Pesquisar</button>
-    </form>
+      <button class="btn btn-info col-auto fw-semibold rounded-1" id="btnSearch" >Pesquisar</button>
+    </div>
     <div class="col-auto">
-      <button class="btn btn-primary fw-semibold text-light rounded-1 add-func" data-bs-toggle="modal" href="#addFuncionario" role="button">Add Funcionário</button>
+      <button class="btn btn-primary fw-semibold text-light rounded-1 add-func" data-bs-toggle="modal" #addEmployeeButton href="#addFuncionario" role="button">Add Funcionário</button>
     </div>
   </div>
 </section>
+
+<!-- Displa Employee -->
+<section>
+  <div *ngIf="employees.length == 0">
+    <h6>
+      Nenhum funcionário foi adicionado.
+    </h6>
+  </div>
+
+  <div *ngFor="let employeeInfos of employeeToDisplay; let i = index">
+    <app-employee [employee]="employeeInfos" (onRemoveEmployee)="removeEmployee($event)" (onEditEmployee)="editEmployee($event)"></app-employee>
+  </div>
+
+</section>
+
+
 
 <!-- Modal Bootstrap -->
 <div class="modal fade" id="addFuncionario" aria-labelledby="addFuncionarioLabel" tabindex="-1" style="display: none;" aria-hidden="true">
@@ -26,7 +42,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form [formGroup]="employeeForm" (submit)="RegisterUser()" class="d-flex flex-column gap-4" id="form-modal">
+        <form [formGroup]="employeeForm" class="d-flex flex-column gap-4" id="form-modal">
           <!-- informações pessoais -->
           <section class="col-auto">
             <h6 class="m-0">
@@ -51,8 +67,8 @@
           <section class="col-auto">
             <h6 class="mb-2">Foto do funcionário</h6>
             <div class="col-auto">
-              <label class="mb-1" for="floatingInputFoto">Carregue uma imagem</label>
-              <input #fileInput type="file" class="border-0 border-bottom form-control" id="floatingInputFoto">
+              <label class="mb-3" for="profile">Carregue uma imagem</label>
+              <input #fileInput type="file" class="border-0 border-bottom form-control" id="profile">
             </div>
           </section>
 
@@ -76,8 +92,8 @@
               <option value="default" selected>
                 Formação
               </option>
-              <option *ngFor="let education of educationList; let i = index;" value="{{i}}">
-                {{ education.title }}
+              <option *ngFor="let option of educationOptions; let i = index;" [value]="i">
+                {{ option }}
               </option>
             </select>
           </section>
@@ -100,7 +116,7 @@
         </form>
       </div>
       <div class="d-flex justify-content-center modal-footer border-0">
-        <button class="btn col-auto fw-semibold rounded-1" id="bntSave" type="button" data-bs-dismiss="modal">Salvar funcionário</button>
+        <button (click)="addEmployee()" class="btn btn-info col-auto fw-semibold rounded-1" id="bntSave" type="button" data-bs-dismiss="modal">Salvar funcionário</button>
       </div>
     </div>
   </div>
