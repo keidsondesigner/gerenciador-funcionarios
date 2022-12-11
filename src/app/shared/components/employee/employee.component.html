@@ -1,0 +1,61 @@
+<section class="container">
+    <div class="row">
+        <img src="../../../../assets/imgFunc/{{ employee.profile }}" />
+    </div>
+    <div>
+        <span class="name">{{ employee.firstname }} {{ employee.lastname }}</span>
+    </div>
+    <div>
+        <button type="button" class="btn btn-success" (click)="editEmployeeClicked()">Editar</button>
+        <button type="button" class="btn btn-danger" (click)="deleteEmployeeClicked()">Deletar</button>
+    </div>
+
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <td>Personal Details</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Birthday</td>
+                    <td>{{ employee.birthdate }}</td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>{{ employee.gender == 'f' ? 'Feminino' : 'Masculino'}}</td>
+                </tr>
+                <tr>
+                    <td>Education</td>
+                    <td>{{ employee.education }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <td>Jobs Details</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Company</td>
+                    <td>{{ employee.company }}</td>
+                </tr>
+                <tr>
+                    <td>Experiency</td>
+                    <td>{{ employee.jobExperience }}</td>
+                </tr>
+                <tr>
+                    <td>Salary</td>
+                    <td>{{ employee.salary }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
