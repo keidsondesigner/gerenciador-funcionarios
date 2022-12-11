@@ -5,6 +5,7 @@ import { SharedModule } from '../shared/shared.module';
 import { ViewsComponent } from './views.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     ViewsRoutingModule,
     SharedModule,
   ]

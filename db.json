@@ -1,9 +1,44 @@
 {
   "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" }
+    {
+      "firstname": "Karol",
+      "lastname": "Siqueira",
+      "birthdate": "2022-12-12",
+      "gender": "f",
+      "education": "Graduação",
+      "company": "Google",
+      "jobExperience": 2,
+      "salary": 5000,
+      "profile": "profile-01.jpg",
+      "id": 1
+    },
+    {
+      "firstname": "Keidson",
+      "lastname": "Roby",
+      "birthdate": "2022-12-15",
+      "gender": "m",
+      "education": "Pós Graduação",
+      "company": "Microsoft",
+      "jobExperience": 4,
+      "salary": 7000,
+      "profile": "profile-02.jpg",
+      "id": 2
+    },
+    {
+      "firstname": "Arthur",
+      "lastname": "Diego",
+      "birthdate": "2022-12-23",
+      "gender": "m",
+      "education": "PhD",
+      "company": "IBM",
+      "jobExperience": 7,
+      "salary": 18000,
+      "profile": "Screenshot 2022-12-07 212857.jpg",
+      "id": 3
+    }
   ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
-  ],
-  "profile": { "name": "typicode" }
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
 }

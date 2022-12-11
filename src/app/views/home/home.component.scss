@@ -10,12 +10,8 @@
   color: $gray !important;
 }
 
-#btnSearch:hover {
+#btnSearch:hover, #bntSave:hover  {
   background-color: $gray-medium;
-}
-
-#bntSave:hover {
-  background-color: $white-medium;
 }
 
 .add-func:hover {
