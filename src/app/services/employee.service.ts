@@ -6,8 +6,8 @@ import { Employee } from '../models/employee.model';
   providedIn: 'root'
 })
 export class EmployeeService {
-  baseUrl = 'https://json-server-vercel-eta.vercel.app/api/posts';
-  //baseUrl = 'http://localhost:3000/posts';
+  //baseUrl = 'https://json-server-vercel-eta.vercel.app/api/posts';
+  baseUrl = 'http://localhost:3000/posts';
 
   constructor( private http: HttpClient ) { }
 

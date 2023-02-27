@@ -75,8 +75,8 @@ export class HomeComponent implements  OnInit {
 
 
   removeEmployee(event: any){
-    this.employees.forEach((val, index) => {
-      if(val.id === parseInt(event)){
+    this.employees.forEach((value, index) => {
+      if(value.id === parseInt(event)){
         this.employeeService.deleteEmployee(event).subscribe((res) => {
           this.employees.splice(index, 1);
         });
@@ -119,8 +119,8 @@ export class HomeComponent implements  OnInit {
     if(event === ''){
       this.employeeToDisplay = this.employees;
     } else {
-      filterEmployess = this.employees.filter((val, index) => {
-        let getKey = val.firstname.toLowerCase() + '' + val.lastname.toLowerCase();
+      filterEmployess = this.employees.filter((value, index) => {
+        let getKey = value.firstname.toLowerCase() + '' + value.lastname.toLowerCase();
         let searchKey = event.toLowerCase();
         return getKey.includes(searchKey);
       });

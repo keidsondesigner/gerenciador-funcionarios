@@ -1,40 +1,28 @@
 {
   "posts": [
     {
-      "firstname": "Karol",
+      "firstname": "keidson",
       "lastname": "Siqueira",
-      "birthdate": "2022-12-12",
-      "gender": "f",
+      "birthdate": "2023-01-12",
+      "gender": "m",
       "education": "Graduação",
-      "company": "Google",
+      "company": "MJV",
       "jobExperience": 2,
-      "salary": 5000,
+      "salary": 6000,
       "profile": "profile-01.jpg",
       "id": 1
     },
     {
-      "firstname": "Keidson",
-      "lastname": "Roby",
-      "birthdate": "2022-12-15",
-      "gender": "m",
-      "education": "Pós Graduação",
-      "company": "Microsoft",
-      "jobExperience": 4,
-      "salary": 7000,
+      "firstname": "Karol",
+      "lastname": "Siqueira",
+      "birthdate": "2023-01-19",
+      "gender": "f",
+      "education": "PhD",
+      "company": "Googçe",
+      "jobExperience": 6,
+      "salary": 13000,
       "profile": "profile-02.jpg",
       "id": 2
-    },
-    {
-      "firstname": "Arthur",
-      "lastname": "Diego",
-      "birthdate": "2022-12-23",
-      "gender": "m",
-      "education": "PhD",
-      "company": "IBM",
-      "jobExperience": 7,
-      "salary": 18000,
-      "profile": "Screenshot 2022-12-07 212857.jpg",
-      "id": 3
     }
   ],
   "comments": [],
